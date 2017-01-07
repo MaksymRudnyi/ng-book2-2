@@ -14,4 +14,20 @@ export class AuthService {
         return false;
     }
 
+    logout(): any {
+        localStorage.removeItem('username');
+    }
+
+    getUser(): any {
+        return localStorage.getItem('username');
+    }
+
+    isLoggedIn(): boolean {
+        return this.getUser() !== null;
+    }
+
 }
+
+export var AUTH_PROVIDERS: Array<any> = [
+    {provide: AuthService, useClass: AuthService}
+];

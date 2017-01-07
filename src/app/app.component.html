@@ -3,8 +3,13 @@
         <a>Navigator</a>
         <ul>
             <li><a [routerLink]="['search']">Home</a></li>
+            <li><a [routerLink]="['protected']">Protected</a></li>
         </ul>
     </nav>
+
+    <app-login></app-login>
+
+    <hr/>
 
     <router-outlet></router-outlet>
 

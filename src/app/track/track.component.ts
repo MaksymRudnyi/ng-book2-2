@@ -9,7 +9,15 @@ import {SpotifyService} from '../spotify.service'
 })
 export class TrackComponent implements OnInit {
 
+    track: Object;
+    id: string;
+
     constructor(private spotify: SpotifyService) {
+        this.id = '1';
+    }
+
+    renderTrack(track: any): void {
+        this.track = track;
     }
 
     ngOnInit() {
